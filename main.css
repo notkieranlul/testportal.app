@@ -1,0 +1,48 @@
+h1 {font-family: 'Courier New', Courier, monospace; text-align: center; font-size: xx-large;}
+
+h2 {font-family: 'Courier New', Courier, monospace; text-align: center; font-size: medium;}
+
+.titles {word-spacing: 200px; font-family: 'Courier New', Courier, monospace; text-align: center; color: black; text-decoration: none;}
+
+.home {word-spacing: 200px; font-family: 'Courier New', Courier, monospace; text-align: center; color: black; text-decoration: none;}
+
+.discord {word-spacing: 200px; font-family: 'Courier New', Courier, monospace; text-align: center; color: black; text-decoration: none;}
+
+.whattxt {color: black; font-family: 'Courier New', Courier, monospace; text-align: center; font-weight: lighter;}
+
+.discordtxt {color: black; font-family: 'Courier New', Courier, monospace; text-align: center; font-weight: bold;}
+
+.howtxt {color: black; font-family: 'Courier New', Courier, monospace; text-align: center; font-weight: lighter;}
+
+.whytxt {color: black; font-family: 'Courier New', Courier, monospace; text-align: center; font-weight: lighter;}
+
+.abouttxt {color: black; font-family: 'Courier New', Courier, monospace; text-align: center; font-weight: lighter;}
+
+a {color: black; font-family: 'Courier New', Courier, monospace; text-align: center; font-weight: lighter;}
+
+.center {display: block; margin-left: auto; margin-right: auto;}
+
+* {box-sizing: border-box;}
+
+.row {display: flex;}
+
+.column {flex: 33.33%; padding: 5px;}
+
+table th {
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 30px;
+}
+
+table td {
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 30px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

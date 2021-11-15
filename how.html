@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test portal by kieran</title>
+  <link rel="shortcut icon" type="image/jpg" href="the-vip-club.jpg"/>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <html lang="en">
+        <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+          <style type="text/css" media="screen">
+            body {
+              background-color: white;
+              color: white;
+              font-family: 'Lucida Grande', Verdana, Arial;
+              font-size: 12px;
+            }
+        
+            #container {
+              width: 100%;
+              height: 700px;
+              -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+              -webkit-perspective-origin: 50% 225px;
+            }
+            #stage {
+              width: 100%;
+              height: 100%;
+              -webkit-transition: -webkit-transform 2s;
+              -webkit-transform-style: preserve-3d;
+            }
+            
+            #shape {
+              position: relative;
+              top: 160px;
+              margin: 0 auto;
+              height: 200px;
+              width: 200px;
+              -webkit-transform-style: preserve-3d;
+            }
+            
+            .plane {
+              position: absolute;
+              height: 200px;
+              width: 200px;
+              -webkit-border-radius: 12px;
+              -webkit-box-sizing: border-box;
+              text-align: center;
+              font-family: Times, serif;
+              font-size: 100pt;
+              color: black;
+              -webkit-transition: -webkit-transform 2s, opacity 2s;
+              -webkit-backface-visibility: hidden;
+            }
+        
+            #shape.backfaces .plane {
+              -webkit-backface-visibility: visible;
+            }
+            
+            #shape {
+              -webkit-animation: spin 8s infinite linear;
+            }
+        
+            @-webkit-keyframes spin {
+              from { -webkit-transform: rotateY(0); }
+              to   { -webkit-transform: rotateY(-360deg); }
+            }
+
+        
+            /* ---------- ring styles ------------- */
+            .ring > .one {
+              -webkit-transform: translateZ(380px);
+            }
+        
+            .ring > .two {
+              -webkit-transform: rotateY(30deg) translateZ(380px);
+            }
+        
+            .ring > .three {
+              -webkit-transform: rotateY(60deg) translateZ(380px);
+            }
+        
+            .ring > .four {
+              -webkit-transform: rotateY(90deg) translateZ(380px);
+            }
+        
+            .ring > .five {
+              -webkit-transform: rotateY(120deg) translateZ(380px);
+            }
+        
+            .ring > .six {
+              -webkit-transform: rotateY(150deg) translateZ(380px);
+            }
+        
+            .ring > .seven {
+              -webkit-transform: rotateY(180deg) translateZ(380px);
+            }
+        
+            .ring > .eight {
+              -webkit-transform: rotateY(210deg) translateZ(380px);
+            }
+        
+            .ring > .nine {
+              -webkit-transform: rotateY(-120deg) translateZ(380px);
+            }
+        
+            .ring > .ten {
+              -webkit-transform: rotateY(-90deg) translateZ(380px);
+            }
+        
+            .ring > .eleven {
+              -webkit-transform: rotateY(300deg) translateZ(380px);
+            }
+        
+            .ring > .twelve {
+              -webkit-transform: rotateY(330deg) translateZ(380px);
+            }
+
+
+            .controls {
+              background: transparent;
+      border: none !important;
+      display: none;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+    .controls > div {
+      margin: 10px;
+      background: transparent;
+      border: none !important;
+    }
+
+    button{
+      background: transparent;
+      border: none !important;
+      display: none;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+        
+          </style>
+          <script type="text/javascript" charset="utf-8">
+            function hasClassName(inElement, inClassName)
+            {
+                var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+                return regExp.test(inElement.className);
+            }
+        
+            function addClassName(inElement, inClassName)
+            {
+                if (!hasClassName(inElement, inClassName))
+                    inElement.className = [inElement.className, inClassName].join(' ');
+            }
+        
+            function removeClassName(inElement, inClassName)
+            {
+                if (hasClassName(inElement, inClassName)) {
+                    var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+                    var curClasses = inElement.className;
+                    inElement.className = curClasses.replace(regExp, ' ');
+                }
+            }
+        
+            function toggleClassName(inElement, inClassName)
+            {
+                if (hasClassName(inElement, inClassName))
+                    removeClassName(inElement, inClassName);
+                else
+                    addClassName(inElement, inClassName);
+            }
+        
+            function toggleShape()
+            {
+              var shape = document.getElementById('shape');
+              if (hasClassName(shape, 'ring')) {
+                removeClassName(shape, 'ring');
+                addClassName(shape, 'cube');
+              } else {
+                removeClassName(shape, 'cube');
+                addClassName(shape, 'ring');
+              }
+              
+              // Move the ring back in Z so it's not so in-your-face.
+              var stage = document.getElementById('stage');
+              if (hasClassName(shape, 'ring'))
+                stage.style.webkitTransform = 'translateZ(-200px)';
+              else
+                stage.style.webkitTransform = '';
+            }
+
+          </script>
+        </head>
+        <body>
+
+          
+          <div class="controls">
+              <button2 onclick="toggleShape()"><u>u n l o c k‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎w e b s i t e</u></button></div>
+              <button2 onclick="toggleShape()"><u>u n l o c k‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎w e b s i t e</u></button></div>
+          </div>
+        
+          <div id="container">
+            <div id="stage">
+              <div id="shape" class="cube backfaces">
+                <div class="plane one" style="font-family: 'Courier New', Courier, monospace">t</div>
+                <div class="plane two" style="font-family: 'Courier New', Courier, monospace">e</div>
+                <div class="plane three" style="font-family: 'Courier New', Courier, monospace">s</div>
+                <div class="plane four" style="font-family: 'Courier New', Courier, monospace">t</div>
+                <div class="plane five"></div>
+                <div class="plane six" style="font-family: 'Courier New', Courier, monospace">p</div>
+                <div class="plane seven" style="font-family: 'Courier New', Courier, monospace">o</div>
+                <div class="plane eight" style="font-family: 'Courier New', Courier, monospace">r</div>
+                <div class="plane nine" style="font-family: 'Courier New', Courier, monospace">t</div>
+                <div class="plane ten" style="font-family: 'Courier New', Courier, monospace">a</div>
+                <div class="plane eleven" style="font-family: 'Courier New', Courier, monospace">l</div>
+                <div class="plane twelve"></div>
+              </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+              <h1><a style="display: none;" style="text-decoration: none;">test portal</h1>
+                <h2><a style="text-decoration: none" href="hidden.html">by kieran</a></h2>
+            
+                <p 
+                    class="titles">
+                    <a href="why.html">why</a>
+                    <a href="about.html">about</a>
+                    how
+                </p>
+            
+                <p class="howtxt">a keyboard :)</p>
+          
+                <p
+                  class="home">
+                <a href="/"> <img src="outline_home_black_24dp.png" alt="homeicon"></a>
+               </p>
+               
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+               <p
+                 class="discord">
+                <a href="https://discord.gg/Trnss7NSB4" target="_blank"> <img src="discordlogo.png" width="25" height="25" alt="discordlink"></a>
+                <p class="whattxt">check out the discord</a></p>
+               </p>
+</body>
+</html>
